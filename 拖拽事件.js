@@ -8,6 +8,7 @@ var tzbtn = new Object();
 //调用方法
 var pic1 =document.getElementsByClassName("formPic1")[0];
 move.init(pic1);
+
 var move = {
 	ansArr: new Array,
 	index:0,
