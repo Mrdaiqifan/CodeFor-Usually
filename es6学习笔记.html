@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>es6学习笔记</title>
+	</head>
+	<style type="text/css">
+		details {
+			width: 100%;
+			height: auto;
+			text-align: left;
+		}
+		
+		summary {
+			width: 30vw;
+		}
+	</style>
+
+	<body>
+		<!--object.assgin-->
+		<details>
+			<summary>Object.assign()</summary>
+			<p><mark>用于复制对象，将对象属性属性所有可枚举属性复制到目标对象</mark>，而常用的a=b方法是赋值属性</p>
+			<p>使用场景：当我们需要一个对象复制属性出来给另一个对象时，并且目标对象方法使用不会对源对象造成数据改变（ps:a=b的方法，在改变b的属性时候，a属性也会受到改变）</p>
+			<p>使用方法：<mark>const target = { a: 1 }; const source1 = { b: 2 }; const source2 = { c: 3 }; Object.assign(target, source1, source2); target // {a:1, b:2, c:3}</mark></p>
+			<p>
+				<a href="https://www.jianshu.com/p/d5f572dd3776">技术文档</a>
+			</p>
+		</details>
+		
+		<details>
+			<summary>ES6之async和await</summary>
+			<p><mark>async和await是用来处理异步的。即你需要异步像同步一样执行，需要异步返回结果之后，再往下依据结果继续执行。相当于es5的promise.then()方法</mark></p>
+			<p>使用场景：<mark>处理异步</mark>async 是“异步”的简写，而 await 可以认为是 async wait 的简写。async 用于申明一个 function 是异步的，而 await 用于等待一个异步方法执行完成</p>
+			<p>使用方法(asyns)：<mark>async function testAsync() {return "hello async";}const result = testAsync();console.log(result);</mark></p>
+			<p>使用方法(awit)：await只能放在async函数内部使用,如果它等到的不是一个 Promise 对象，那 await 表达式的运算结果就是它等到的东西。 如果它等到的是一个 Promise 对象，await 就会阻塞后面的代码，等着 Promise 对象 resolve，然后得到 resolve 的值，作为 await 表达式的运算结果。<mark>// 2s 之后返回双倍的值function doubleAfter2seconds(num) {return new Promise((resolve, reject) => {setTimeout(() => {resolve(2 * num)}, 2000); }) } async function testResult () { let result = await doubleAfter2seconds(30); console.log(result); } testResult(); // 2s 之后，输出了60.</mark></p>
+			<p>
+				<a href="https://www.jianshu.com/p/4e91c4be2843">技术文档</a>
+			</p>
+		</details>
+		
+		<details>
+			<summary>=>箭头函数</summary>
+			<p><mark>箭头函数中的this指向的是定义时的this，而不是执行时的this</p>
+			<p>使用场景：es6新方法，能用则用</p>
+			<p>使用方法：<mark>function(){console.log('hello')}&nbsp;向上面的方法写成箭头函数后是这样的：&nbsp;()=> conosle.log('hello')</mark></p>
+			<p>
+				<a href="https://www.jianshu.com/p/846b991de0a3">技术文档</a>
+			</p>
+		</details>
+	</body>
+
+</html>
